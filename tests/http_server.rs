@@ -3,8 +3,8 @@ use reqwest::{Method, Response};
 use std::net::{SocketAddr, TcpListener};
 use std::str::FromStr;
 use std::sync::{Arc, Mutex};
-use tiny_mailcatcher::http::run_http_server;
-use tiny_mailcatcher::repository::{Message, MessageRepository};
+use mailgrep::http::run_http_server;
+use mailgrep::repository::{Message, MessageRepository};
 use tokio::task::JoinHandle;
 
 fn create_repository_with_messages(messages: Vec<Message>) -> Arc<Mutex<MessageRepository>> {

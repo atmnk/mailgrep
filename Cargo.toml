@@ -1,18 +1,18 @@
 [package]
-name = "tiny-mailcatcher"
-version = "0.9.3"
-authors = ["Pieter van den Ham <pevandenham@gmail.com>"]
+name = "mailgrep"
+version = "0.10.1"
+authors = ["Atmaram Naik <naik_atmaram@yahoo.com>","Pieter van den Ham <pevandenham@gmail.com>"]
 edition = "2018"
 license = "MIT"
-description = "A tiny MailCatcher clone"
+description = "Mail catcher with advance rest endpoints"
 readme = "README.md"
-repository = "https://github.com/pevdh/tiny-mailcatcher"
+repository = "https://github.com/atmnk/mailgrep"
 keywords = ["email", "mailcatcher", "smtp", "mta"]
 categories = ["development-tools"]
 
 [[bin]]
-name = "tiny-mailcatcher"
-path = "src/bin/tiny-mailcatcher.rs"
+name = "mailgrep"
+path = "src/bin/mailgrep.rs"
 
 [dependencies]
 tokio = { version = "1", features = ["io-util", "io-std", "macros", "net", "rt-multi-thread"] }

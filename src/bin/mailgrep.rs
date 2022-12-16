@@ -3,8 +3,8 @@ use std::error::Error;
 use std::net::TcpListener;
 use std::sync::{Arc, Mutex};
 use structopt::StructOpt;
-use tiny_mailcatcher::repository::MessageRepository;
-use tiny_mailcatcher::{http, smtp};
+use mailgrep::repository::MessageRepository;
+use mailgrep::{http, smtp};
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> Result<(), Box<dyn Error + Sync + Send>> {

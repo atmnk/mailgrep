@@ -2,8 +2,8 @@ use lettre::{AsyncSmtpTransport, AsyncTransport, Message as EmailMessage, Tokio1
 use std::net::{SocketAddr, TcpListener};
 use std::str::FromStr;
 use std::sync::{Arc, Mutex};
-use tiny_mailcatcher::repository::MessageRepository;
-use tiny_mailcatcher::smtp::run_smtp_server;
+use mailgrep::repository::MessageRepository;
+use mailgrep::smtp::run_smtp_server;
 use tokio::task::JoinHandle;
 
 fn launch_test_smtp_server(repository: Arc<Mutex<MessageRepository>>, port: u16) -> JoinHandle<()> {
